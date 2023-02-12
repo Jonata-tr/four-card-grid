@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+:root{ 
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Blue-shadow: hsla(212, 86%, 64%, 0.1);
+  --tittles: hsl(231, 13%, 20%);
+  --Grayish-Blue: hsl(229, 6%, 66%);  
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p{
+  font-size: 15px;
+  color: var(--Grayish-Blue);
+}
+
+body{
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 60px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 60px;
+}
+
+header{
+  width: 500px;
+  text-align: center;
+  display: grid;
+  gap: 20px;
+}
+
+header h1{
+  color: var(--tittles);
+}
+
+header span{
+font-weight: 200;
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(8, 50px);
+  gap: 20px;
+  padding: 10px 200px;
+}
+
+main h2{
+  color: var(--tittles);
+}
+
+.box{
+  position: relative;
+  padding: 28px;
+  display: grid;
+  grid-template-rows: repeat(2, 40px) 100px;
+  width: 400px;
+  height: 252px;
+  background-color: #fff;
+  grid-row: 3 / 6;
+
+  box-shadow: 0px 0 24px 0 var(--Blue-shadow);
+}
+
+.box span{
+  position: absolute;
+  top: -4px;
+  width: 400px;
+  height: 6px;
+  border-radius: 4px 4px 0 0;
+}
+
+.box.red{
+  grid-column: 2;
+  grid-row: 1 / 4;
+}
+.box.blue{
+  grid-column: 2;
+  grid-row: 5 / 8;
+}
+
+.box img{
+  place-self: end;
+}
